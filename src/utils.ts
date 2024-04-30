@@ -10,7 +10,7 @@ export function parseUserCsv(csv) {
   ]
 
   const data = csv.split("\n").map(row => row.split(","))
-  const users = data.map(row => {
+  const users = data.slice(1).map(row => {
     const user: User = {
       name: row[0],
       age: parseInt(row[1])
