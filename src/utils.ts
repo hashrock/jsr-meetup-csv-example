@@ -4,11 +4,6 @@ interface User {
 }
 
 export function parseUserCsv(csv) {
-  const header = [
-    "Name",
-    "Age"
-  ]
-
   const data = csv.split("\n").map(row => row.split(","))
   const users = data.slice(1).map(row => {
     const user: User = {
