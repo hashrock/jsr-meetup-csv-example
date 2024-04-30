@@ -7,7 +7,7 @@ Alice,20
 Bob,25
 Charlie,30`;
   const users = parseUserCsv(csv);
-  expect(users).toBe([
+  expect(users).toStrictEqual([
     { name: "Alice", age: 20 },
     { name: "Bob", age: 25 },
     { name: "Charlie", age: 30 },
